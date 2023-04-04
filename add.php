@@ -12,6 +12,13 @@ if (empty($nome) || empty($ingredientes) || empty($dificuldade_preparo) || empty
     exit;
 }
 
+if (($quanto_gosta < 0 || $quanto_gosta > 10) || ($dificuldade_preparo < 0 || $dificuldade_preparo > 10)){
+    echo "Valor inválido";
+    exit;
+} 
+
+
+
 $PDO = db_connect();
 $sql = "INSERT INTO pratos(nome, ingredientes, dificuldade_preparo, quanto_gosta) VALUES(:nome, :ingredientes, :dificuldade_preparo, :quanto_gosta)";
 $stmt = $PDO->prepare($sql);

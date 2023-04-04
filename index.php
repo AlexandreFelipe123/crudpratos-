@@ -50,7 +50,7 @@ $stmt -> execute();
                         <td><?php echo $user['dificuldade_preparo']?></td>
                         <td><?php echo $user['quanto_gosta']?></td>
                         <td>
-                            <a hre´f="form-edit.php?"id=<?php echo $user['id'] ?>">Editar</a>
+                            <a href="form-edit.php?id=<?php echo $user['id'] ?>">Editar</a>
                             <a href="delete.php?id=<?php echo $user['id'] ?>" onclick="return confirm('Tem certeza de que deseja remover?');">Remover</a>
                         </td>
                     </tr>      

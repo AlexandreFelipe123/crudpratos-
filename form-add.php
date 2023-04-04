@@ -30,7 +30,7 @@ require 'init.php';
 				<label for = "quanto_gosta">Quanto Gosta: </label>
 				<input type = "text" class = "form-control col-sm" name="quanto_gosta" id = "quanto_gosta" style="width:25%" placeholder = "Informe o quanto você gosta desse prato">		
 			</div>
-				<button type = "submit" class = "btn btn-primary"<Cadastrar</button>
+				<button type = "submit" class = "btn btn-primary">Cadastrar</button>
 			</form>
 		</div>	
 		</body>
