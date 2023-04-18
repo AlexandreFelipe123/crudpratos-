@@ -42,7 +42,7 @@ if (!is_array($pratos))
 		<div class="container my-5">
 		<div class="card p-3 mx-auto border border-danger" style="max-width: 500px;">
 			<h2 class="text-center">Edite sua comida favorita</h2>
-			<form action="add.php" method="post">
+			<form action="edit.php" method="post">
 				<div class="form-group">
 					<label for="nome">Nome: </label>
 					<input type="text" class="form-control col-sm border-danger" name="nome" id="nome"  value="<?php echo $pratos["nome"] ?>">
