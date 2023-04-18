@@ -37,12 +37,12 @@ require 'init.php';
 				</div>
 				<div class="form-group">
 					<label for="dificuldade_preparo">Dificuldade de preparo: </label>
-					<input type="text" class="form-control col-sm border-danger" name="dificuldade_preparo" id="dificuldade_preparo"
+					<input type="number" class="form-control col-sm border-danger" name="dificuldade_preparo" id="dificuldade_preparo"
 						 placeholder="Nível de dificuldade (0 a 10)">
 				</div>
 				<div class="form-group">
 					<label for="quanto_gosta">Quanto Gosta: </label>
-					<input type="text" class="form-control col-sm border-danger" name="quanto_gosta" id="quanto_gosta"
+					<input type="number" class="form-control col-sm border-danger" name="quanto_gosta" id="quanto_gosta"
 						 placeholder="Nota (0 a 10)">
 				</div>
 				<button type="submit" class="btn btn-warning">Cadastrar</button>
@@ -51,3 +51,4 @@ require 'init.php';
 	</div>
 </body>
 </html>
+

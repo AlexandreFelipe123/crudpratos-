@@ -41,7 +41,7 @@ if (!is_array($pratos))
 	</div>
 		<div class="container my-5">
 		<div class="card p-3 mx-auto border border-danger" style="max-width: 500px;">
-			<h2 class="text-center">Edite sua comida favorita</h2>
+			<h2 class="text-center text-danger">Edite sua comida favorita</h2>
 			<form action="edit.php" method="post">
 				<div class="form-group">
 					<label for="nome">Nome: </label>
@@ -60,7 +60,7 @@ if (!is_array($pratos))
 					<input type="text" class="form-control col-sm border-danger" name="quanto_gosta" id = "quanto_gosta"  value="<?php echo $pratos["quanto_gosta"] ?>">
 				</div>
 					<input type = "hidden" name = "id" value="<?php echo $id ?>">
-					<button type="submit" class="btn btn-warning">Editar</button>
+					<button type="submit" class="btn btn-danger">Editar</button>
 			</form>
 		</div>
 	</div>

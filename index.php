@@ -22,15 +22,47 @@ $stmt->execute();
   <link rel="stylesheet" href="estilo.css">
   <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
   <script src="bootstrap/js/bootstrap.js"></script>
+  <script src = "bootstrap/js/popper.min.js"></script>
+  <script src = "bootstrap/js/jquery.min.js"></script>
+  
+
 </head>
+
 <body>
-  <div class="container-fluid">
-    <header class="row" id="header">
-      <a href="index.php" id="a-header">
-        <h1 id="h1-header">Cadastro de Comidas Favoritas</h1>
-      </a>
-    </header>
-  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light-rounded">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10"
+      aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"> </span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-md-center " id="
+navbarsExample10">
+      <ul class=" navbar-nav">
+        <li class=" nav-item active ">
+          <a class="nav-link " href=" index.html "> Início <span class="sr-only ">( atual ) </span> </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class=" nav-link dropdown-toggle " href=" #" id="dropdown10" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false"> Pratos </a>
+          <div class="dropdown-menu" aria-labelledby="dropdown10">
+            <a class=" dropdown-item" href="form-add.php"> Cadastrar Tarefa </a>
+            <a class=" dropdown-item " href=" exibirTarefasPendentes.php"> Listar Tarefas Pendentes </a>
+            <a class=" dropdown-item " href=" exibirTarefasConcluidas.php"> Listar Tarefas Realizadas </a>
+            <a class=" dropdown-item " href=" pesquisarTarefas.html">
+              Pesquisar Tarefas </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href=" #" id="dropdown10" data-toggle=" dropdown" aria-haspopup="true"
+            aria-expanded="false"> Ingredientes  </a>
+          <div class="dropdown-menu" aria-labelledby=" dropdown10">
+            <a class=" dropdown-item " href = "form-add-tipo.html "> Cadastrar Tipo </a>
+            <a class=" dropdown-item " href = "exibirTipos.php"> Listar Tipos </a>
+            <a class=" dropdown-item " href = "pesquisarTipo.html"> Pesquisar Tipo </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <div class="container-fluid mt-5">
     <div class="card-deck justify-content-center">
       <div class="col-md-4 mb-4">
@@ -41,7 +73,7 @@ $stmt->execute();
           <div class="card-body">
             <h5 class="card-title">Cadastro de Nova Comida</h5>
             <p class="card-text">Cadastre uma nova comida para a sua lista de comidas favoritas.</p>
-            <a href="form-add.php" class="btn btn-primary">Cadastrar</a>
+            <a href="form-add.php" class="btn btn-warning">Cadastrar</a>
           </div>
         </div>
       </div>
@@ -75,7 +107,7 @@ $stmt->execute();
                         <?php echo $pratos['quanto_gosta'] ?>
                       </td>
                       <td>
-                        <a href="form-edit.php?id=<?php echo $pratos['id'] ?>" class="btn btn-primary">Editar</a>
+                        <a href="form-edit.php?id=<?php echo $pratos['id'] ?>" class="btn btn-warning">Editar</a>
                         <a href="delete.php?id=<?php echo $pratos['id'] ?>" class="btn btn-danger"
                           onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
                       </td>
