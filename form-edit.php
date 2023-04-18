@@ -26,33 +26,43 @@ if (!is_array($pratos))
 	<head>
 		<meta charset="utf-8">
 		<title>Cadastro de Comidas Favoritas</title>
+		<link rel="stylesheet" href="estilo.css">
+		<link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
 		<link href = "bootstrap/css/bootstrap.css" rel="stylesheet">
         <script src = "bootstrap/js/bootstrap.js"></script>
 	</head>
 	<body>
-		<div class="container">
-			<h1>Edite suas comidas favoritas</h1>
-			<h2>Editar</h2>
-			<form action="edit.php" method="post">
-			<div class="form-group">
-				<label for ="nome">Nome: </label>
-				<input type = "text" class = "form-control col-sm" name="nome" id="nome" style= "width:25%;" value="<?php echo $pratos["nome"] ?>">
-			</div>
-			<div class="form-group">
-				<label for = "ingredientes">Ingredientes: </label>
-				<input type = "text" class = "form-control col-sm" name="ingredientes" id = "ingredientes" style="width:25%" value = "<?php echo $pratos["ingredientes"] ?>">
-			</div>
-			<div class="form-group">
-				<label for = "dificuldade_preparo">Dificuldade de preparo:  </label>
-				<input type = "number" class = "form-control col-sm" name="dificuldade_preparo" id="dificuldade_preparo" style= "width:25%;" value="<?php echo $pratos["dificuldade_preparo"] ?>">
-			</div>
-			<div class="form-group">
-				<label for = "quanto_gosta">Quanto Gosta: </label>
-				<input type = "number" class = "form-control col-sm" name="quanto_gosta" id = "quanto_gosta" style="width:25%" value="<?php echo $pratos["quanto_gosta"] ?>">		
-			</div>
-				<input type = "hidden" name = "id" value="<?php echo $id ?>">
-                <button type = "submit" class = "btn btn-primary">Editar</button>
+	<div class="container-fluid">
+		<header class="row" id="header">
+			<a href="index.php" id="a-header">
+				<h1 id="h1-header">Cadastro de Comidas Favoritas</h1>
+			</a>
+		</header>
+	</div>
+		<div class="container my-5">
+		<div class="card p-3 mx-auto border border-danger" style="max-width: 500px;">
+			<h2 class="text-center">Edite sua comida favorita</h2>
+			<form action="add.php" method="post">
+				<div class="form-group">
+					<label for="nome">Nome: </label>
+					<input type="text" class="form-control col-sm border-danger" name="nome" id="nome"  value="<?php echo $pratos["nome"] ?>">
+				</div>
+				<div class="form-group">
+					<label for="ingredientes">Ingredientes: </label>
+					<input type="text" class="form-control col-sm border-danger"  name="ingredientes" id = "ingredientes"  value = "<?php echo $pratos["ingredientes"] ?>">
+				</div>
+				<div class="form-group">
+					<label for="dificuldade_preparo">Dificuldade de preparo: </label>
+					<input type="text" class="form-control col-sm border-danger" name="dificuldade_preparo" id="dificuldade_preparo"  value="<?php echo $pratos["dificuldade_preparo"] ?>">
+				</div>
+				<div class="form-group">
+					<label for="quanto_gosta">Quanto Gosta: </label>
+					<input type="text" class="form-control col-sm border-danger" name="quanto_gosta" id = "quanto_gosta"  value="<?php echo $pratos["quanto_gosta"] ?>">
+				</div>
+					<input type = "hidden" name = "id" value="<?php echo $id ?>">
+					<button type="submit" class="btn btn-warning">Editar</button>
 			</form>
-		</div>	
+		</div>
+	</div>
 		</body>
 </html>
